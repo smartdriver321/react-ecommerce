@@ -1,10 +1,11 @@
 import { Outlet } from 'react-router-dom'
 import './App.css'
+import NavItem from './components/NavItems'
 
 export default function App() {
   return (
     <>
-      <nav>Nav Bar</nav>
+      <NavItem></NavItem>
       <Outlet />
     </>
   )
