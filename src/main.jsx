@@ -13,8 +13,9 @@ import 'bootstrap/dist/js/bootstrap.min.js'
 import '././assets/css/icofont.min.css'
 import '././assets/css/animate.css'
 import '././assets/css/style.min.css'
-import Home from './home/Home.jsx'
-import Blog from './blog/Blog.jsx'
+
+import Blog from './pages/Blog/Blog.jsx'
+import Home from './pages/home/Home.jsx'
 
 const router = createBrowserRouter([
   {
