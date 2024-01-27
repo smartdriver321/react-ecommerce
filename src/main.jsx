@@ -26,6 +26,8 @@ import Contact from './pages/ContactPage/Contact.jsx'
 import Login from './components/Login.jsx'
 import PrivateRoute from './PrivateRoute/PrivateRoute.jsx'
 import Signup from './components/Signup.jsx'
+import AuthProvider from './contexts/AuthProvider.jsx'
+import CheckoutPage from './pages/Shop/CheckoutPage.jsx'
 
 const router = createBrowserRouter([
   {
@@ -75,11 +77,17 @@ const router = createBrowserRouter([
     element: <Login />,
   },
   {
-    path: '/login',
+    path: '/signup',
     element: <Signup />,
+  },
+  {
+    path: '/check-out',
+    element: <CheckoutPage />,
   },
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <RouterProvider router={router}></RouterProvider>
+  <AuthProvider>
+    <RouterProvider router={router}></RouterProvider>
+  </AuthProvider>
 )
